@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 
 export const Header = () => (
   <header>
-    <Link to="/">
-      <h1>Boilerplate</h1>
-    </Link>
+    <ul>
+      <li><Link to="/"> <p>HSP</p> </Link></li>
+      <li><Link to="/statistics"> <p>Statistics</p> </Link></li>
+      <li><Link to="/quiz"> <p>Quiz</p> </Link></li>
+    </ul>
+
   </header>
 );
 
