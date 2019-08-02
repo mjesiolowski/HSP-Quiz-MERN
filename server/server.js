@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 require('../db/mongoose')
 const Stats = require('../db/models/stats')
 
@@ -7,6 +8,7 @@ const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT;
 
+app.use(cors());
 app.use(express.json())
 app.use(express.static(publicPath));
 
