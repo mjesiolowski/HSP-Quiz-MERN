@@ -5,6 +5,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 import Statistics from '../components/Statistics';
 import Quiz from '../components/Quiz';
+import FAQDetails from '../components/FAQDetails';
 
 
 const AppRouter = () => (
@@ -12,8 +13,9 @@ const AppRouter = () => (
     <Header />
     <Switch>
       <Route path="/" component={HomePage} exact={true} />
-      <Route path="/statistics" component={Statistics} exact={true} />
-      <Route path="/quiz" component={Quiz} exact={true} />
+      <Route path="/statistics" component={Statistics} />
+      <Route path="/quiz" component={Quiz} />
+      <Route path="/content/:id" component={FAQDetails} />
       <Route component={NotFoundPage} />
     </Switch>
   </BrowserRouter>
