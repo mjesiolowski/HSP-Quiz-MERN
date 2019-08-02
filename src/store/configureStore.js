@@ -1,15 +1,9 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+import { createStore } from 'redux';
+import { quizReducer } from '../reducers/quiz'
 
 export default () => {
-  const store = createStore(
-    combineReducers({
-
-    }),
-    composeEnhancers(applyMiddleware(thunk))
-  );
+  const store = createStore(quizReducer);
 
   return store;
 };
+
