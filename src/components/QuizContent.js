@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux'
 import QuizDetails from './QuizDetails'
 import { incrementSet } from '../actions/quiz'
+import { questions, oppositeQuestions } from '../texts/content'
 
 const QuizContent = ({ match, incrementSet, setToRender }) => {
   console.log(setToRender)
   const questionsPerPage = 1
-  const questions = ['Violence and cruelty affect me deeply.', 'I easily absorb other people’s feelings.']
-  const oppositeQuestions = ['I love spending hours out, I cannot get enough being among other people.', 'I can easily adopt to changes, routines make me get bored easily.']
+
 
   const renderQuestions = (questions, questionsPerPage, setToRender) => {
     switch (setToRender) {

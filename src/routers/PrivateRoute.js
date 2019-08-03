@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
-import NotFoundPage from '../components/NotFoundPage'
 
 const PrivateRoute = ({
   completedSteps,
