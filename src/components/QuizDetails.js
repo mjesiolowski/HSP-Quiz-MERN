@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux'
-import { addPoints, addAnswer } from '../actions/quiz'
+import { addPoints, addAnswer, renderSet } from '../actions/quiz'
 
-const QuizDetails = ({ addAnswer, addPoints, handleAddPoints, question, opposite }) => {
-
+const QuizDetails = ({ addAnswer, addPoints, match, renderSet, question, opposite }) => {
   const [isAnswered, setIsAnswered] = useState(false)
   const [pointsState, setPoints] = useState(0)
 
@@ -18,6 +17,9 @@ const QuizDetails = ({ addAnswer, addPoints, handleAddPoints, question, opposite
     }
     setPoints(points)
   }
+
+
+  // renderSet(match.params.id)
 
   return (
     <div>
@@ -61,6 +63,7 @@ const QuizDetails = ({ addAnswer, addPoints, handleAddPoints, question, opposite
 const mapDispatchToProps = (dispatch) => ({
   addPoints: (points) => dispatch(addPoints(points)),
   addAnswer: () => dispatch(addAnswer()),
+  // renderSet: () => dispatch(renderSet())
 })
 
 export default connect(undefined, mapDispatchToProps)(QuizDetails)

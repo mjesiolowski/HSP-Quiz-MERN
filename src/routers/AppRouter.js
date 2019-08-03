@@ -7,6 +7,7 @@ import Statistics from '../components/Statistics';
 import Quiz from '../components/Quiz';
 import FAQDetails from '../components/FAQDetails';
 import QuizContent from '../components/QuizContent';
+import PrivateRoute from '../routers/PrivateRoute';
 
 
 const AppRouter = () => (
@@ -16,7 +17,7 @@ const AppRouter = () => (
       <Route path="/" component={HomePage} exact={true} />
       <Route path="/statistics" component={Statistics} />
       <Route path="/quiz" component={Quiz} exact={true} />
-      <Route path="/quiz/:id" component={QuizContent} />
+      <PrivateRoute path="/quiz/:id" component={QuizContent} />
       <Route path="/content/:id" component={FAQDetails} />
       <Route component={NotFoundPage} />
     </Switch>
