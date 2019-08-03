@@ -4,9 +4,15 @@ import QuizDetails from './QuizDetails'
 import { incrementSet } from '../actions/quiz'
 import { questions, oppositeQuestions } from '../texts/content'
 
-const QuizContent = ({ match, incrementSet, setToRender }) => {
-  console.log(setToRender)
-  const questionsPerPage = 1
+const QuizContent = ({ answers, match, incrementSet, setToRender }) => {
+  // console.log(setToRender)
+  const questionsPerPage = 2
+  const quizPageParameters = {
+    questionsPerPage,
+    setToRender,
+    answers,
+    maxSetsNumber: Math.ceil(questions.length / questionsPerPage)
+  }
 
 
   const renderQuestions = (questions, questionsPerPage, setToRender) => {
@@ -18,21 +24,27 @@ const QuizContent = ({ match, incrementSet, setToRender }) => {
     }
   }
 
-  const handleNextButton = () => {
-    incrementSet()
+  const handleNextButton = ({ answers, maxSetsNumber, setToRender, questionsPerPage }) => {
+    if (setToRender >= maxSetsNumber) {
+      return console.log('Redirect')
+    }
+    if (answers === questionsPerPage * setToRender) {
+      return incrementSet()
+    }
   }
 
   return (
     <div>
       <h2>Quiz content</h2>
       {renderQuestions(questions, questionsPerPage, setToRender)}
-      <button onClick={handleNextButton}>NEXT</button>
+      <button onClick={() => handleNextButton(quizPageParameters)}>NEXT</button>
     </div>
   )
 }
 
-const mapStateToProps = ({ setToRender }) => {
+const mapStateToProps = ({ answers, setToRender }) => {
   return {
+    answers,
     setToRender
   }
 }

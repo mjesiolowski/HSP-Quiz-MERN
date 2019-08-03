@@ -1,4 +1,4 @@
-const questions = ['Violence and cruelty affect me deeply.', 'I easily absorb other people’s feelings.']
+const questions = ['Violence and cruelty affect me deeply.', 'I easily absorb other people’s feelings.', 'I love spending hours out, I cannot get enough being among other people.', 'I can easily adopt to changes, routines make me get bored easily.']
 const oppositeQuestions = ['I love spending hours out, I cannot get enough being among other people.', 'I can easily adopt to changes, routines make me get bored easily.']
 
 const FAQContentTexts = ['The definition of a highly sensitive person is someone who experiences acute physical, mental, or emotional responses to stimuli. This can include external stimuli, like your surroundings and the people you’re with, or internal stimuli, like your own thoughts, emotions and realizations.',
