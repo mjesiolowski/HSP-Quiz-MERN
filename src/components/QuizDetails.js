@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux'
-import { addPoints, addAnswer, renderSet } from '../actions/quiz'
+import { addPoints, addAnswer } from '../actions/quiz'
 
-const QuizDetails = ({ addAnswer, addPoints, match, renderSet, question, opposite }) => {
+const QuizDetails = ({ addAnswer, addPoints, isOpposite, question }) => {
   const [isAnswered, setIsAnswered] = useState(false)
   const [pointsState, setPoints] = useState(0)
 
@@ -23,7 +23,7 @@ const QuizDetails = ({ addAnswer, addPoints, match, renderSet, question, opposit
 
   return (
     <div>
-      {!opposite &&
+      {!isOpposite &&
         <>
           <p>{question}</p>
           <div>
@@ -40,7 +40,7 @@ const QuizDetails = ({ addAnswer, addPoints, match, renderSet, question, opposit
         </>
       }
 
-      {opposite &&
+      {isOpposite &&
         <>
           <p>{question}</p>
           <div>
