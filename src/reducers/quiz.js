@@ -1,8 +1,8 @@
 const quizDefaultState = {
-  answersNumber: 0,
+  answeredCount: 0,
   points: 0,
   currentSet: 1,
-  completedSteps: 1,
+  completedSteps: 0,
 }
 
 export const quizReducer = (state = quizDefaultState, action) => {
@@ -15,7 +15,7 @@ export const quizReducer = (state = quizDefaultState, action) => {
     case 'ADD_ANSWER':
       return {
         ...state,
-        answersNumber: state.answersNumber + 1,
+        answeredCount: state.answeredCount + 1,
       }
     case 'INCREMENT_SET':
       return {

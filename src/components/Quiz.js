@@ -1,14 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { incrementCompletedSteps } from '../actions/quiz'
 
-const Quiz = () => (
-  <div>
-    <h2>Quiz component</h2>
-    <p>About the quiz</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident iusto nobis fugit expedita repudiandae dolores iure cum consequuntur, quo magni at atque corrupti odit vitae illo. Voluptatum totam velit fuga doloribus ab ut eveniet molestiae voluptates quos dolore eius quia laudantium vel quibusdam, accusamus impedit voluptatibus et blanditiis commodi maiores vitae non repellat ullam. Optio obcaecati sequi illum, excepturi a eos sapiente aliquid ullam placeat nihil sint! Cupiditate quidem dolores ipsam aperiam consequatur maiores voluptatibus, unde sit dolor veniam quis reiciendis odio cum? Praesentium sequi dicta assumenda ipsa vitae, accusantium veniam debitis recusandae quisquam! Laboriosam consectetur voluptatum ratione quas! Aperiam reiciendis cum debitis velit aliquid corrupti mollitia nostrum! Dolore dolores itaque at sint culpa impedit magnam nam quia illo pariatur reiciendis deserunt quasi voluptatibus eum, doloremque recusandae molestias eveniet. Obcaecati maxime adipisci voluptatibus sed maiores corporis omnis dolor distinctio repellat aliquid. Eum, dignissimos impedit. Dolore nihil expedita iure quis totam.</p>
-    <Link to='/quiz/start' >START</Link>
-  </div>
+const Quiz = ({ incrementCompletedSteps }) => {
 
-);
+  const handleClick = () => {
+    incrementCompletedSteps()
+  }
 
-export default Quiz;
+  return (
+    <div>
+      <h2>Quiz component</h2>
+      <p>About the quiz</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident iusto nobis fugit expedita repudiandae dolores iure cum consequuntur, quo magni at atque corrupti odit vitae illo. Voluptatum totam velit fuga doloribus ab ut eveniet molestiae voluptates quos dolore eius quia laudantium vel quibusdam, accusamus impedit voluptatibus et blanditiis commodi maiores vitae non repellat ullam. Optio obcaecati sequi illum, excepturi a eos sapiente aliquid ullam placeat nihil sint! Cupiditate quidem dolores ipsam aperiam consequatur maiores voluptatibus, unde sit dolor veniam quis reiciendis odio cum? Praesentium sequi dicta assumenda ipsa vitae, accusantium veniam debitis recusandae quisquam! Laboriosam consectetur voluptatum ratione quas! Aperiam reiciendis cum debitis velit aliquid corrupti mollitia nostrum! Dolore dolores itaque at sint culpa impedit magnam nam quia illo pariatur reiciendis deserunt quasi voluptatibus eum, doloremque recusandae molestias eveniet. Obcaecati maxime adipisci voluptatibus sed maiores corporis omnis dolor distinctio repellat aliquid. Eum, dignissimos impedit. Dolore nihil expedita iure quis totam.</p>
+      <Link to='/quiz/start' onClick={() => handleClick()}>START</Link>
+    </div>
+  )
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  incrementCompletedSteps: () => dispatch(incrementCompletedSteps()),
+})
+
+
+export default connect(undefined, mapDispatchToProps)(Quiz)

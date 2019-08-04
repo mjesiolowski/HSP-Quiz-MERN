@@ -1,69 +1,61 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import QuizDetails from './QuizDetails'
+import { NavLink } from 'react-router-dom'
 import { incrementSet } from '../actions/quiz'
 import { questions, oppositeQuestions } from '../texts/content'
 
-const QuizContent = ({ answersNumber, currentSet, incrementSet }) => {
-  const questionsPerPage = 3 //each array of questions
-  const arrayWithQuestionsNumber = 2
+const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
   const quizPageParameters = {
-    answersNumber,
+    answeredCount,
+    arrayWithQuestionsNumber: 2,
     currentSet,
-    // maxQuestionsNumber: questions.length + oppositeQuestions.length,
-    maxQuestionsNumber: questions.length,
-    maxSetsNumber: Math.ceil(questions.length / questionsPerPage),
-    questionsPerPage,
+    maxQuestionsNumber: questions.length + oppositeQuestions.length,
+    maxSetsNumber() { return Math.ceil(this.maxQuestionsNumber / (this.questionsPerPage * this.arrayWithQuestionsNumber)) },
+    questionsPerPage: 3
   }
 
+  const renderQuestions = (questions, isOpposite, { currentSet, questionsPerPage, }) => {
 
-  const renderQuestions = (questions, isOpposite, { questionsPerPage, currentSet }) => {
-    switch (currentSet) {
-      case 1:
-        return questions.slice(0, questionsPerPage).map((question) => <QuizDetails key={question} question={question} isOpposite={isOpposite} />)
-      case 2:
-        return questions.slice(questionsPerPage, questionsPerPage * 2).map((question) => <QuizDetails key={question} question={question} isOpposite={isOpposite} />)
-      case 3:
-        return questions.slice(questionsPerPage * 2, questionsPerPage * 3).map((question) => <QuizDetails key={question} question={question} isOpposite={isOpposite} />)
-      case 4:
-        return questions.slice(questionsPerPage * 3, questionsPerPage * 4).map((question) => <QuizDetails key={question} question={question} isOpposite={isOpposite} />)
-    }
+    return questions.slice(questionsPerPage * (currentSet - 1), questionsPerPage * (currentSet)).map((question) => <QuizDetails key={question} question={question} isOpposite={isOpposite} />)
   }
 
-  const handleNextButton = ({ answersNumber, maxSetsNumber, maxQuestionsNumber, currentSet, questionsPerPage }) => {
-    console.log(answersNumber, maxQuestionsNumber)
-
-    // if (answers === questionsPerPage * arrayWithQuestionsNumber * currentSet) {
-    if (answersNumber === questionsPerPage * currentSet && answersNumber !== maxQuestionsNumber) {
-      return incrementSet()
+  const handleNextButton = ({ answeredCount, arrayWithQuestionsNumber, currentSet, questionsPerPage }) => {
+    if (answeredCount === questionsPerPage * currentSet * arrayWithQuestionsNumber) {
+      incrementSet()
     }
 
-    if (answersNumber === maxQuestionsNumber) {
-      return console.log('Redirect')
+  }
+  const handleResultsButton = (e, { answeredCount, maxQuestionsNumber }) => {
+    if (answeredCount !== maxQuestionsNumber) {
+      e.preventDefault()
     }
-
   }
 
   return (
     <div>
       <h2>Quiz content</h2>
       {renderQuestions(questions, false, { ...quizPageParameters })}
-      {/* {renderQuestions(oppositeQuestions, true, { ...quizPageParameters })} */}
-      <button onClick={() => handleNextButton(quizPageParameters)}>{quizPageParameters.currentSet === quizPageParameters.maxSetsNumber ? 'RESULTS' : 'NEXT'}</button>
+      {renderQuestions(oppositeQuestions, false, { ...quizPageParameters })}
+
+      {currentSet < quizPageParameters.maxSetsNumber() ?
+        <button onClick={() => handleNextButton(quizPageParameters)}>Next</button> :
+        <NavLink to="/results" onClick={(e) => handleResultsButton(e, quizPageParameters)}>RESULTS</NavLink>
+      }
 
     </div>
   )
 }
 
-const mapStateToProps = ({ answersNumber, currentSet }) => {
+const mapStateToProps = ({ answeredCount, currentSet }) => {
   return {
-    answersNumber,
+    answeredCount,
     currentSet
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  incrementSet: () => dispatch(incrementSet())
+  incrementSet: () => dispatch(incrementSet()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuizContent)

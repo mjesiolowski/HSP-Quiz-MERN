@@ -8,7 +8,7 @@ const questions = [
   'Loud music makes me uncomfortable and irritated.',
   'It is vital for me to withdraw after a busy day to a quiet, darkened room to reduce stimulation.',
   'I get overwhelmed in large crowds places like bars, clubs, concerts, parties, and festivals',
-  // 'I cry easily, both from sadness and happiness.']
+  'I cry easily, both from sadness and happiness.'
 ]
 
 const oppositeQuestions = [
