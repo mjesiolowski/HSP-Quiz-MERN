@@ -61,7 +61,7 @@ const Quiz = ({ incrementCompletedSteps, setUser }) => {
         </select>
         <label>
           Age:
-          <input type="number" value={userAge} onChange={(e) => setUserAge(e.target.value)} />
+          <input type="number" value={userAge} onChange={(e) => setUserAge(parseInt(e.target.value, 10))} />
           {userAge === 0 && <p>Please remember to provide your age</p>}
         </label>
       </form>

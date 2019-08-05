@@ -20,7 +20,7 @@ const AppRouter = () => (
       <Route path="/quiz" component={Quiz} exact={true} />
       <PrivateRoute path="/quiz/:id" component={QuizContent} />
       <PrivateRoute path="/results" component={Results} />
-      <Route path="/content/:id" component={FAQDetails} />
+      <Route path="/faq/:id" component={FAQDetails} />
       <Route component={NotFoundPage} />
     </Switch>
   </BrowserRouter>

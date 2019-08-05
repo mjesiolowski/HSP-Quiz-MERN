@@ -20,7 +20,7 @@ const FAQContent = ({ content }) => {
   return (
     <div>
       <p>{setContent(content)}</p>
-      <Link to={'/content/' + content.replace(/\s+/g, '_')}>Details</Link>
+      <Link to={'/faq/' + content.replace(/\s+/g, '_')}>Details</Link>
     </div>
   )
 }

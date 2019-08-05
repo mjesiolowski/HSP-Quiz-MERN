@@ -3,7 +3,8 @@ const quizDefaultState = {
   points: 0,
   currentSet: 1,
   completedSteps: 0,
-  singleQuestionHighestScore: 4
+  singleQuestionHighestScore: 4,
+  isHSPScore: 60
 }
 
 export const quizReducer = (state = quizDefaultState, action) => {
