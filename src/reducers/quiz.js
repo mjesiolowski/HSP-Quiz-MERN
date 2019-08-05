@@ -2,7 +2,8 @@ const quizDefaultState = {
   answeredCount: 0,
   points: 0,
   currentSet: 1,
-  completedSteps: 0,
+  completedSteps: 1,
+  singleQuestionHighestScore: 4
 }
 
 export const quizReducer = (state = quizDefaultState, action) => {

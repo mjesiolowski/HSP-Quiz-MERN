@@ -36,7 +36,7 @@ const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
     <div>
       <h2>Quiz content</h2>
       {renderQuestions(questions, false, { ...quizPageParameters })}
-      {renderQuestions(oppositeQuestions, false, { ...quizPageParameters })}
+      {renderQuestions(oppositeQuestions, true, { ...quizPageParameters })}
 
       {currentSet < quizPageParameters.maxSetsNumber() ?
         <button onClick={() => handleNextButton(quizPageParameters)}>Next</button> :
