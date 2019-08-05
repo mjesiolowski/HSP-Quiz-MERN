@@ -19,8 +19,12 @@ const PrivateRoute = ({
     )} />)
 }
 
-const mapStateToProps = ({ completedSteps }) => ({
-  completedSteps
-})
+const mapStateToProps = ({ quizReducer }) => {
+
+  const { completedSteps } = quizReducer
+  return ({
+    completedSteps
+  })
+}
 
 export default connect(mapStateToProps)(PrivateRoute)

@@ -62,8 +62,10 @@ const mapDispatchToProps = (dispatch) => ({
   addAnswer: () => dispatch(addAnswer()),
 })
 
-const mapStateToProps = ({ singleQuestionHighestScore }) => ({
-  singleQuestionHighestScore
-})
-
+const mapStateToProps = ({ quizReducer }) => {
+  const { singleQuestionHighestScore } = quizReducer
+  return ({
+    singleQuestionHighestScore
+  })
+}
 export default connect(mapStateToProps, mapDispatchToProps)(QuizDetails)

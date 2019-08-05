@@ -52,7 +52,8 @@ const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
   )
 }
 
-const mapStateToProps = ({ answeredCount, currentSet }) => {
+const mapStateToProps = ({ quizReducer }) => {
+  const { answeredCount, currentSet } = quizReducer
   return {
     answeredCount,
     currentSet

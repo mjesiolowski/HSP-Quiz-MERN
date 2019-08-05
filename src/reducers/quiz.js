@@ -2,7 +2,7 @@ const quizDefaultState = {
   answeredCount: 0,
   points: 0,
   currentSet: 1,
-  completedSteps: 1,
+  completedSteps: 0,
   singleQuestionHighestScore: 4
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { questions, oppositeQuestions } from '../texts/content'
 import axios from 'axios'
+import { quizReducer } from '../reducers/quiz';
 
 const Results = ({ points, singleQuestionHighestScore }) => {
 
@@ -19,9 +20,9 @@ const Results = ({ points, singleQuestionHighestScore }) => {
     console.log(result)
     if (result >= 60) {
       return 'There is a quite high chance that you are one of highly sensitive persons. Being highly sensitive is a normal trait. Approximately 15 to 20 percent of the population has the gene that makes them highly sensitive. Now that you got this knowledge, I encourage you to dive deeper into HSP’s traits as it is essential for your personal growth.'
-    } else if (result < 60 && result >= 30) {
+    } else if (result < 60 && result >= 40) {
       return 'Although you share some traits with highly sensitive persons, you seem not to be one them. Since approximately 15 to 20 percent of the population has the gene that makes them highly sensitive, I strongly encourage you to look into the FAQ section, as it may enrich your knowledge about HSP making it easier to communicate with them.'
-    } else return 'According to the score, you do not share many HSP’s traits. Since approximately 15 to 20 percent of the population has the gene that makes them highly sensitive, I strongly encourage you to look into the FAQ section, as it may enrich your knowledge about HSP making it easier to communicate with them.'
+    } else return 'According to your score, you do not share many HSP’s traits. Since approximately 15 to 20 percent of the population has the gene that makes them highly sensitive, I strongly encourage you to look into the FAQ section, as it may enrich your knowledge about HSP making it easier to communicate with them.'
   }
 
   useEffect(() => {
@@ -37,13 +38,20 @@ const Results = ({ points, singleQuestionHighestScore }) => {
 
 
   return (
-    <p>{renderResults(result)}</p>
+    <>
+      <p>Your result: <span>{Math.round(result)}</span>%</p>
+      <p>{renderResults(result)}</p>
+    </>
+
   )
 }
 
-const mapStateToProps = ({ points, singleQuestionHighestScore }) => ({
-  points,
-  singleQuestionHighestScore
-})
+const mapStateToProps = ({ quizReducer }) => {
 
+  const { points, singleQuestionHighestScore } = quizReducer
+  return ({
+    points,
+    singleQuestionHighestScore
+  })
+}
 export default connect(mapStateToProps)(Results)
