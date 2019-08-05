@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { questions, oppositeQuestions } from '../texts/content'
 import axios from 'axios'
-import { quizReducer } from '../reducers/quiz';
 
 const Results = ({ points, singleQuestionHighestScore }) => {
 
@@ -11,7 +10,7 @@ const Results = ({ points, singleQuestionHighestScore }) => {
     points,
     singleQuestionHighestScore,
   }
-  const setResult = ({ maxQuestionsNumber, points, singleQuestionHighestScore }) => points / (maxQuestionsNumber * singleQuestionHighestScore) * 100
+  const setResult = ({ maxQuestionsNumber, points, singleQuestionHighestScore }) => Math.round(points / (maxQuestionsNumber * singleQuestionHighestScore) * 100)
 
   const result = (setResult(resultSettings))
 
@@ -39,7 +38,7 @@ const Results = ({ points, singleQuestionHighestScore }) => {
 
   return (
     <>
-      <p>Your result: <span>{Math.round(result)}</span>%</p>
+      <p>Your result: <span>{result}</span>%</p>
       <p>{renderResults(result)}</p>
     </>
 

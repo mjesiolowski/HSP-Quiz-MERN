@@ -18,7 +18,6 @@ const FAQ = () => {
         <li onClick={(e) => handleClick(e)}>What is HSP?</li>
         <li onClick={(e) => handleClick(e)}>3 Things You Need to Know About Highly Sensitive People</li>
         <li onClick={(e) => handleClick(e)}>4 Science-Based Traits That Define a Highly Sensitive Person</li>
-        <li onClick={(e) => handleClick(e)}>21 Signs That You’re a Highly Sensitive Person by Jenn Granneman</li>
       </ol>
       <FAQContent content={contentState} />
     </div>

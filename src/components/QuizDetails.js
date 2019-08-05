@@ -5,7 +5,7 @@ import { addPoints, addAnswer } from '../actions/quiz'
 const QuizDetails = ({ addAnswer, addPoints, isOpposite, singleQuestionHighestScore, question }) => {
   const [isAnswered, setIsAnswered] = useState(false)
   const [pointsState, setPoints] = useState(0)
-  console.log(singleQuestionHighestScore)
+
   const handleClick = (e) => {
     const points = parseInt(e.target.attributes.count.value, 10)
     if (!isAnswered) {

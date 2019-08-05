@@ -14,8 +14,6 @@ const FAQContent = ({ content }) => {
         return FAQContentTexts[1]
       case '4 Science-Based Traits That Define a Highly Sensitive Person':
         return FAQContentTexts[2]
-      case '21 Signs That You’re a Highly Sensitive Person by Jenn Granneman':
-        return FAQContentTexts[3]
     }
   }
 
