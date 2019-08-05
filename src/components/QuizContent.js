@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import QuizDetails from './QuizDetails'
 import { NavLink } from 'react-router-dom'
@@ -6,6 +6,11 @@ import { incrementSet } from '../actions/quiz'
 import { questions, oppositeQuestions } from '../texts/content'
 
 const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [currentSet])
+
   const quizPageParameters = {
     answeredCount,
     arrayWithQuestionsNumber: 2,

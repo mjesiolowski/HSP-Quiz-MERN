@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 
 const statsSchema = new mongoose.Schema({
-  isHSP: {
-    type: Boolean,
-    required: true
-  },
   age: {
-    type: String,
+    type: Number,
     required: true
   },
   gender: {
     type: String,
+    required: true
+  },
+  result: {
+    type: Number,
     required: true
   }
 })

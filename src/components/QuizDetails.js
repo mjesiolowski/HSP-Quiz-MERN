@@ -18,9 +18,6 @@ const QuizDetails = ({ addAnswer, addPoints, isOpposite, singleQuestionHighestSc
     setPoints(points)
   }
 
-
-  // renderSet(match.params.id)
-
   return (
     <div>
       {!isOpposite &&
