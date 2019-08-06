@@ -42,7 +42,7 @@ const Quiz = ({ incrementCompletedSteps, setUser }) => {
       </p>
 
       <p>
-        I thing I know what is going on. There is actually NOTHING going on and you are probably a Highly Sensitive Person, as 15-20% people on this planet.
+        I know what is going on. There is actually NOTHING going on and you are probably a Highly Sensitive Person, as 15-20% people on this planet.
       </p>
 
       <p>

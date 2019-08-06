@@ -1,0 +1,57 @@
+.nav {
+  background-color: white;
+  height: 15vh;
+  position: relative;
+}
+
+.nav__hamburger {
+  @include flexbox(center, center);
+  background-color: $black;
+  flex-basis: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.nav__button {
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  font-size: $font-size-xxl;
+}
+
+.nav__icon {
+  color: $white;
+}
+
+.nav__list {
+  @include flexbox(center, center);
+  border-top: 1px solid $white;
+  background-color: $black;
+  color: $white;
+  flex-basis: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  top: 0;
+  transition: top .7s ease-out;
+
+  &--hidden {
+    left: 0;
+    top: -50vh;
+  }
+}
+
+.nav__item {
+  border-bottom: 1px solid $white;
+  flex-basis: 100%;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  color: $white;
+  text-decoration: none;
+}
