@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, } from 'react-router-dom';
 import HomePage from '../components/HomePage';
 import NotFoundPage from '../components/NotFoundPage';
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 import Statistics from '../components/Statistics';
 import Quiz from '../components/Quiz';
 import FAQ from '../components/FAQ';
@@ -26,6 +27,7 @@ const AppRouter = () => (
         <Route path="/faq/:id" component={FAQDetails} />
         <Route component={NotFoundPage} />
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
 );
