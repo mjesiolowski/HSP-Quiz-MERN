@@ -6,6 +6,15 @@
 .header__content {
   background-color: $green;
   color: $white;
-  padding: $m-size;
+  padding: $s-size;
   text-align: center;
+}
+
+.header__links {
+  @include flexbox(center, center);
+}
+
+.header__link {
+  flex-basis: 100%;
+  margin: $xs-size 0;
 }

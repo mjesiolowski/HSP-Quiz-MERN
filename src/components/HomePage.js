@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQ from './FAQ'
+import { Link } from 'react-router-dom';
 
 const HomePage = () => (
   <>
@@ -27,12 +28,15 @@ const HomePage = () => (
         <p className="text">
           You are probably a Highly Sensitive Person, as 15-20% people on this planet.
       </p>
+
+        <div className="header__links">
+          <Link className="header__link link button" to="/faq">I want to know more!</Link>
+          <Link className="header__link link button" to="/quiz">Take the test!</Link>
+        </div>
+
       </div>
 
     </header>
-    <div>
-      <FAQ />
-    </div>
   </>
 );
 

@@ -15,9 +15,9 @@ export const Nav = () => {
       </div>
 
       <ul className="nav__list nav__list--hidden">
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="nav__link" to="/"> <p>HSP</p> </Link></li>
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="nav__link" to="/statistics"> <p>Statistics</p> </Link></li>
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="nav__link" to="/quiz"> <p>Quiz</p> </Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/"> <p>HSP</p> </Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/statistics"> <p>Statistics</p> </Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/quiz"> <p>Quiz</p> </Link></li>
       </ul>
     </nav>
   );

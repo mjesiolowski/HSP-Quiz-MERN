@@ -5,6 +5,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import Nav from '../components/Nav';
 import Statistics from '../components/Statistics';
 import Quiz from '../components/Quiz';
+import FAQ from '../components/FAQ';
 import FAQDetails from '../components/FAQDetails';
 import QuizContent from '../components/QuizContent';
 import Results from '../components/Results';
@@ -21,6 +22,7 @@ const AppRouter = () => (
         <Route path="/quiz" component={Quiz} exact={true} />
         <PrivateRoute path="/quiz/:id" component={QuizContent} />
         <PrivateRoute path="/results" component={Results} />
+        <Route path="/faq" component={FAQ} exact={true} />
         <Route path="/faq/:id" component={FAQDetails} />
         <Route component={NotFoundPage} />
       </Switch>
