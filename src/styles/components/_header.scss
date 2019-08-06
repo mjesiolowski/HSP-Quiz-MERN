@@ -1,0 +1,11 @@
+.header {
+  background: url('/images/bg-1.jpg') no-repeat right;
+  background-size: cover;
+}
+
+.header__content {
+  background-color: $green;
+  color: $white;
+  padding: $m-size;
+  text-align: center;
+}

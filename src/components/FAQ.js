@@ -12,7 +12,7 @@ const FAQ = () => {
 
 
   return (
-    <div>
+    <div id="FAQ">
       <h2>FAQ content</h2>
       <ol>
         <li onClick={(e) => handleClick(e)}>What is HSP?</li>
