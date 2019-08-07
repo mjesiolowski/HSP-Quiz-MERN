@@ -1,6 +1,8 @@
 .button {
   border: 1px solid $white;
+  border-radius: 5px;
   background-color: $transparent-black;
   text-transform: uppercase;
-  padding: $m-size
+  padding: $m-size;
+  width: 100%;
 }

@@ -1,10 +1,10 @@
 .nav {
-  background-color: white;
+  // background-color: white;
   height: $nav-heigth;
   position: relative;
 
   @media (orientation: landscape) {
-    height: $nav-heigth + 10vh;
+    height: $nav-heigth + 4vh;
   }
 }
 
@@ -22,6 +22,10 @@
   border: 1px solid $white;
   border-radius: 5px;
   font-size: $font-size-xxl;
+
+  @media (orientation: landscape) {
+    font-size: $font-size-xl;
+  }
 }
 
 .nav__icon {
@@ -41,10 +45,10 @@
   position: relative;
   text-align: center;
   top: 0;
-  transition: top .7s ease-out;
+  transition: top .4s ease-in-out;
 
   &--hidden {
-    top: -100vh;
+    top: -80vh;
   }
 }
 

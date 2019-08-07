@@ -2,4 +2,9 @@
   color: $white;
   display: inline-block;
   text-decoration: none;
+
+  &--FAQ {
+    font-style: italic;
+    text-decoration: underline;
+  }
 }

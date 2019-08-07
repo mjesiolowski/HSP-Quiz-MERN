@@ -12,15 +12,18 @@ const FAQ = () => {
 
 
   return (
-    <div id="FAQ">
-      <h2>FAQ content</h2>
-      <ol>
-        <li onClick={(e) => handleClick(e)}>What is HSP?</li>
-        <li onClick={(e) => handleClick(e)}>3 Things You Need to Know About Highly Sensitive People</li>
-        <li onClick={(e) => handleClick(e)}>4 Science-Based Traits That Define a Highly Sensitive Person</li>
-      </ol>
-      <FAQContent content={contentState} />
-    </div>
+    <section className="FAQ">
+      <div className="FAQ__content">
+        <h2 className="title">FAQ</h2>
+        <ol className="FAQ__list">
+          <li className="FAQ__item text" onClick={(e) => handleClick(e)}>What is HSP?</li>
+          <li className="FAQ__item text" onClick={(e) => handleClick(e)}>3 Things You Need to Know About Highly Sensitive People</li>
+          <li className="FAQ__item text" onClick={(e) => handleClick(e)}>4 Science-Based Traits That Define a Highly Sensitive Person</li>
+        </ol>
+        <FAQContent content={contentState} />
+      </div>
+
+    </section>
   )
 }
 

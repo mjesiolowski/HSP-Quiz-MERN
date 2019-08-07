@@ -4,7 +4,6 @@ import { FAQContentTexts } from '../texts/content'
 
 const FAQContent = ({ content }) => {
 
-
   const setContent = (content) => {
 
     switch (content) {
@@ -19,8 +18,8 @@ const FAQContent = ({ content }) => {
 
   return (
     <div>
-      <p>{setContent(content)}</p>
-      <Link to={'/faq/' + content.replace(/\s+/g, '_')}>Details</Link>
+      <p className="text">{setContent(content)}</p>
+      <Link className="link button" to={'/faq/' + content.replace(/\s+/g, '_')}>Details</Link>
     </div>
   )
 }
