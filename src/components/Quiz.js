@@ -6,9 +6,9 @@ import { setUser } from '../actions/user'
 
 const Quiz = ({ incrementCompletedSteps, setUser }) => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
 
   const [userAge, setUserAge] = useState(0)
   const [userGender, setUserGender] = useState("M")
@@ -21,60 +21,79 @@ const Quiz = ({ incrementCompletedSteps, setUser }) => {
         age: userAge
       })
     }
+
   }
 
   return (
-    <div>
-      <h2>About the quiz</h2>
-      <p>
-        Have you ever been told to overreacting or being "too sensitive"?
+    <div className="quiz">
+      <div className="quiz__content">
+        <h2 className="title">About the quiz</h2>
+        <p className="text">
+          Have you ever been told to overreacting or being "too sensitive"?
       </p>
-      <p>
-        Do you get this feeling that your senses are constantly stimulated?
+        <p className="text">
+          Do you get this feeling that your senses are constantly stimulated?
       </p>
-      <p>
-        Do you worship your downtime as if it was the best part of your day?
+        <p className="text">
+          Do you worship your downtime as if it was the best part of your day?
       </p>
-      <p>
-        Do loud music and crowded places make you get irritated and overwhlemed, but at the same time you enjoy the company of your friends?
+        <p className="text">
+          Do loud music and crowded places make you get irritated and overwhlemed, but at the same time you enjoy the company of your friends?
       </p>
-      <p>
-        Do you get this feeling that everyone around has much more energy that you?
+        <p className="text">
+          Do you get this feeling that everyone around has much more energy that you?
     </p>
-      <p>
-        ...and this sudden "I need it now" request from you boss that ruins your well-planned schedule.
+        <p className="text">
+          ...and this sudden "I need it now" request from you boss that ruins your well-planned schedule.
       </p>
 
-      <p>
-        I know what is going on. There is actually NOTHING going on and you are probably a Highly Sensitive Person, as 15-20% people on this planet.
+        <p className="text">
+          I know what is going on. There is actually NOTHING going on and you are probably a Highly Sensitive Person, as 15-20% people on this planet.
       </p>
 
-      <p>
-        To find out, take these 20 questions quiz below.
+        <p className="text">
+          To find out, take these 20 questions quiz below.
       </p>
 
 
-      <form onSubmit={(e) => { e.preventDefault(), console.log('submit') }}>
+        <form
+          className="form"
+          onSubmit={(e) => { e.preventDefault() }}>
+          <label
+            className="form__label">
+            Gender:
         <select
-          name="gender"
-          value={userGender}
-          onChange={(e) => setUserGender(e.target.value)}
-        >
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-        </select>
-        <label>
-          Age:
-          <input type="number" value={userAge} onChange={(e) => setUserAge(parseInt(e.target.value, 10))} />
-          {userAge === 0 && <p>Please remember to provide your age</p>}
-        </label>
-      </form>
-      <Link
-        to='/quiz/start'
-        onClick={() => handleClick()}
-      >START</Link>
+              className="form__select"
+              name="gender"
+              value={userGender}
+              onChange={(e) => setUserGender(e.target.value)}
+            >
+              <option
+                value="M">Male</option>
+              <option
+                value="F">Female</option>
+            </select>
+          </label>
 
+          <label
+            className="form__label"
+          >
+            Age:
+          <input
+              className="form__input"
+              type="number"
+              value={userAge}
+              onChange={(e) => setUserAge(parseInt(e.target.value, 10))} />
+            {userAge <= 0 && <p className="form__alert" style={{ color: '#f4511e' }}>Please remember to provide your age.</p>}
+          </label>
+        </form>
+        <Link
+          className="link button quiz__button"
+          to='/quiz/start'
+          onClick={() => handleClick()}
+        >START</Link>
 
+      </div>
     </div>
   )
 }

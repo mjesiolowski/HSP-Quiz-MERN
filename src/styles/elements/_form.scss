@@ -1,0 +1,27 @@
+.form {
+  @include flexbox(center, center);
+  background-color: darken($quiz-color, 10%);
+}
+
+.form__label {
+  flex-basis: 100%;
+  padding: $xs-size
+}
+
+.form__select {
+  border: none;
+  border-radius: 5px;
+  margin: $xs-size 0;
+  padding: $xs-size 0;
+  text-align: center;
+  width: 100%;
+}
+
+.form__input {
+  @extend .form__select
+}
+
+.form__alert {
+  font-size: $font-size-s;
+  margin: 0;
+}

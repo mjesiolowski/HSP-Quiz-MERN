@@ -29,7 +29,7 @@ const HomePage = () => (
 
       <div className="header__links">
         <Link className="header__link link button" to="/faq">I want to know more</Link>
-        <Link className="header__link link button" to="/quiz">Take the test</Link>
+        <Link className="header__link link button" to="/quiz">Take the quiz</Link>
       </div>
     </div>
   </header>
