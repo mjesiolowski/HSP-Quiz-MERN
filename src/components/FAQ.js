@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FAQContent from './FAQContent'
 
 const FAQ = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [contentState])
 
   const [contentState, setContentState] = useState('What is HSP?')
 

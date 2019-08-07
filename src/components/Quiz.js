@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { incrementCompletedSteps } from '../actions/quiz'
 import { setUser } from '../actions/user'
 
 const Quiz = ({ incrementCompletedSteps, setUser }) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const [userAge, setUserAge] = useState(0)
   const [userGender, setUserGender] = useState("M")
