@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Statistics = ({ isHSPScore }) => {
@@ -23,15 +24,15 @@ const Statistics = ({ isHSPScore }) => {
 
       return (
         <>
-          <p>{allUsersCount} <span>{allUsersCount === 1 ? 'person has' : 'people have'}</span> taken part in the quiz so far.</p>
-          <p>{womenPercentage}% of them are women and {menPercentage}% are men.</p>
-          <p>{isHSPPercentage}% of them are HSP.</p>
+          <p className="text"><strong>{allUsersCount}</strong> <span>{allUsersCount === 1 ? 'person has' : 'people have'}</span> taken part in the quiz so far.</p>
+          <p className="text"><strong>{womenPercentage}%</strong> of them are women and <strong>{menPercentage}%</strong> are men.</p>
+          <p className="text"><strong>{isHSPPercentage}%</strong> of them are HSP.</p>
         </>
       )
     }
     catch (e) {
       return (
-        <p>Loading statistics...</p>
+        <p className="text">Loading statistics...</p>
       )
     }
   }
@@ -39,9 +40,14 @@ const Statistics = ({ isHSPScore }) => {
   renderStats()
 
   return (
-    <div>
-      <h2>Statistics</h2>
+    <div className="statistics">
+      <h2 className="title">Statistics</h2>
       {renderStats()}
+      <Link
+        className="link button"
+        to='/'
+        onClick={() => handleClick()}
+      >RETURN</Link>
     </div>
   )
 }

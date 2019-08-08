@@ -4,11 +4,11 @@ import { connect } from 'react-redux'
 import { incrementCompletedSteps } from '../actions/quiz'
 import { setUser } from '../actions/user'
 
-const Quiz = ({ incrementCompletedSteps, setUser }) => {
+const QuizInfo = ({ incrementCompletedSteps, setUser }) => {
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const [userAge, setUserAge] = useState(0)
   const [userGender, setUserGender] = useState("M")
@@ -88,11 +88,15 @@ const Quiz = ({ incrementCompletedSteps, setUser }) => {
           </label>
         </form>
         <Link
-          className="link button quiz__button"
+          className="link button"
           to='/quiz/start'
           onClick={() => handleClick()}
         >START</Link>
-
+        <Link
+          className="link button"
+          to='/'
+          onClick={() => handleClick()}
+        >RETURN</Link>
       </div>
     </div>
   )
@@ -104,4 +108,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(undefined, mapDispatchToProps)(Quiz)
+export default connect(undefined, mapDispatchToProps)(QuizInfo)

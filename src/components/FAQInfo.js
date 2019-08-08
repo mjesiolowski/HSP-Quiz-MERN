@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FAQContent from './FAQContent'
 
-const FAQ = () => {
+const FAQInfo = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -32,4 +32,4 @@ const FAQ = () => {
 }
 
 
-export default FAQ;
+export default FAQInfo;

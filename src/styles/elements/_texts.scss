@@ -1,4 +1,7 @@
 .text {
   font-size: $font-size-m;
-  margin: $m-size $xs-size;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: $s-size $xs-size;
+  text-align: center;
 }

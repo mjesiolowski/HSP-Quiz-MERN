@@ -1,17 +1,20 @@
 .footer {
   background-color: $black;
   color: $white;
+  padding: $xs-size;
   text-align: center;
 }
 
 .footer__title {
   font-size: $font-size-s;
+  letter-spacing: 1px;
   margin: 0;
   padding: $xs-size;
 }
 
 .footer__link {
   font-size: $font-size-xs;
+  letter-spacing: 1px;
   margin: 0;
   padding-bottom: $xs-size;
 }

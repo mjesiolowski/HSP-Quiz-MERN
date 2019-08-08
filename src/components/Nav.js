@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export const Nav = () => {
   const toggleMenuVisibility = () => {
     const menu = document.querySelector('.nav__list')
-    console.log(menu)
     menu.classList.toggle('nav__list--hidden')
   }
 

@@ -14,11 +14,11 @@ const Footer = () => {
       <section className="footer__sources">
         <h2 className="footer__title">Sources</h2>
         <a className="footer__link link" href="https://highlysensitiverefuge.com/highly-sensitive-person-signs/"
-          target="_blank" rel="noopener" aria-label="Navigate to highlysensitiverefuge.com">highlysensitiverefuge.com/highly-sensitive-person-signs/</a>
+          target="_blank" rel="noopener" aria-label="Navigate to highlysensitiverefuge.com">highlysensitiverefuge.com/highly-sensitive-person-signs</a>
         <a className="footer__link link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/"
-          target="_blank" rel="noopener" aria-label="Navigate to highlysensitiverefuge.com">highlysensitiverefuge.com/what-is-highly-sensitive-person/</a>
+          target="_blank" rel="noopener" aria-label="Navigate to highlysensitiverefuge.com">highlysensitiverefuge.com/what-is-highly-sensitive-person</a>
         <a className="footer__link link" href="https://hsperson.com/test/highly-sensitive-test/"
-          target="_blank" rel="noopener" aria-label="Navigate to highlysensitiverefuge.com">hsperson.com/test/highly-sensitive-test/</a>
+          target="_blank" rel="noopener" aria-label="Navigate to highlysensitiverefuge.com">hsperson.com/test/highly-sensitive-test</a>
       </section>
       <section className="footer__author-info">
         <h2 className="footer__title">Author</h2>

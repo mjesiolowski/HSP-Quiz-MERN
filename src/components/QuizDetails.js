@@ -7,7 +7,18 @@ const QuizDetails = ({ addAnswer, addPoints, isOpposite, singleQuestionHighestSc
   const [pointsState, setPoints] = useState(0)
 
   const handleClick = (e) => {
-    const points = parseInt(e.target.attributes.count.value, 10)
+    const option = e.target
+
+    const toggleActiveCalss = (option) => {
+      option.parentNode.childNodes.forEach(option => {
+        option.classList.remove('active')
+      })
+      option.classList.add('active')
+    }
+
+    toggleActiveCalss(option)
+
+    const points = parseInt(option.attributes.count.value, 10)
     if (!isAnswered) {
       addPoints(points)
       setIsAnswered(true)
@@ -19,37 +30,41 @@ const QuizDetails = ({ addAnswer, addPoints, isOpposite, singleQuestionHighestSc
   }
 
   return (
-    <div>
+    <div className="quiz__section">
       {!isOpposite &&
         <>
-          <p>{question}</p>
+          <p className="text">{question}</p>
           <div>
-            <p>Agree</p>
-            <div>
-              <div count={singleQuestionHighestScore} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 1} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 2} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 3} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 4} onClick={(e) => handleClick(e)}>O</div>
+            <div className="quiz__options">
+              <div className="quiz__option quiz__option--agree-max" count={singleQuestionHighestScore} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--agree-min" count={singleQuestionHighestScore - 1} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--neutral" count={singleQuestionHighestScore - 2} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--disagree-min" count={singleQuestionHighestScore - 3} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--disagree-max" count={singleQuestionHighestScore - 4} onClick={(e) => handleClick(e)}></div>
             </div>
-            <p>Disagree</p>
+            <div className="quiz__choice">
+              <p className="quiz__agree text">Agree</p>
+              <p className="quiz__disagree text">Disagree</p>
+            </div>
           </div>
         </>
       }
 
       {isOpposite &&
         <>
-          <p>{question}</p>
+          <p className="text">{question}</p>
           <div>
-            <p>Agree</p>
-            <div>
-              <div count={singleQuestionHighestScore - 4} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 3} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 2} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore - 1} onClick={(e) => handleClick(e)}>O</div>
-              <div count={singleQuestionHighestScore} onClick={(e) => handleClick(e)}>O</div>
+            <div className="quiz__options">
+              <div className="quiz__option quiz__option--agree-max" count={singleQuestionHighestScore - 4} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--agree-min" count={singleQuestionHighestScore - 3} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--neutral" count={singleQuestionHighestScore - 2} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--disagree-min" count={singleQuestionHighestScore - 1} onClick={(e) => handleClick(e)}></div>
+              <div className="quiz__option quiz__option--disagree-max" count={singleQuestionHighestScore} onClick={(e) => handleClick(e)}></div>
             </div>
-            <p>Disagree</p>
+            <div className="quiz__choice">
+              <p className="quiz__agree text">Agree</p>
+              <p className="quiz__disagree text">Disagree</p>
+            </div>
           </div>
         </>
       }

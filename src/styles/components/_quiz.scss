@@ -1,15 +1,113 @@
+$option-size: 4rem;
+
+$max-agree-color: #bef67a;
+$max-disagree-color: #ff5722;
+$min-agree-color: #8bc34a;
+$min-disagree-color: #ff8a50;
+$neutral-color: #9e9e9e;
+
+@mixin handleOptionColor($color) {
+  border-color: $color;
+  // transition: .1s;
+
+  &.active {
+    background-color: $color;
+  }
+}
+
 .quiz {
-  background: url('/images/bg-3.jpg') no-repeat left;
-  background-size: cover;
+  // background: url('/images/bg-3.jpg') no-repeat left;
+  // background-size: cover;
 }
 
 .quiz__content {
   background-color: $quiz-color;
   color: $white;
-  padding: $xs-size;
+  padding: $xs-size $xs-size 0 $xs-size;
   text-align: center;
 }
 
+.quiz__section {
+  padding: $m-size 0;
+  border-bottom: 2px solid darken($quiz-color, 10%);
+}
+
+.quiz__choice {
+  @include flexbox(center, space-between)
+}
+
+.quiz__agree {
+  text-align: left;
+  margin: 0 $s-size
+}
+
+.quiz__disagree {
+  @extend .quiz__agree;
+  text-align: right;
+}
+
+.quiz__options {
+  @include flexbox(center, center);
+  margin: $s-size 0;
+}
+
+.quiz__option {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: $option-size;
+  margin: $xs-size;
+  width: $option-size;
+
+  &--agree-max {
+    @include handleOptionColor($max-agree-color);
+  }
+
+  &--agree-min {
+    @include handleOptionColor($min-agree-color);
+  }
+
+  &--neutral {
+    @include handleOptionColor($neutral-color);
+  }
+
+  &--disagree-min {
+    @include handleOptionColor($min-disagree-color);
+  }
+
+  &--disagree-max {
+    @include handleOptionColor($max-disagree-color);
+  }
+}
+
 .quiz__button {
-  margin: $m-size 0
+  margin: $l-size 0;
+}
+
+.quiz__progress-bar {
+  border: 2px solid $white;
+  border-radius: 20px;
+  height: 3.5rem;
+  margin: $l-size 0 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.quiz__progress-bar-filler {
+  background: $white;
+  border-radius: inherit;
+  height: 100%;
+  text-align: center;
+  transition: width .2s ease-in;
+}
+
+.quiz__progress-bar-percentage {
+  color: $transparent-black;
+  font-weight: bold;
+  width: 100%;
+  // background-color: #bef67a;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  // transform: translateY(50%)
 }
