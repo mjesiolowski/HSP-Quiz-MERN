@@ -17,17 +17,19 @@ const FAQContent = ({ content }) => {
   }
 
   return (
-    <div>
-      <p className="text">{setContent(content)}</p>
-      <Link
-        className="link button"
-        to={'/faq/' + content.replace(/\s+/g, '_')}
-      >Details</Link>
-      <Link
-        className="link button"
-        to="/"
-      >Return</Link>
-    </div>
+    <>
+      <div className="FAQ__text"><p className="text">{setContent(content)}</p></div>
+      <div className="FAQ__buttons">
+        <Link
+          className="FAQ__button link button"
+          to="/"
+        >Return</Link>
+        <Link
+          className="FAQ__button link button"
+          to={'/faq/' + content.replace(/\s+/g, '_')}
+        >Details</Link>
+      </div>
+    </>
   )
 }
 

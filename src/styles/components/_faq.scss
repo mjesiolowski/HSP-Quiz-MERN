@@ -1,16 +1,16 @@
 .FAQ {
   background-color: $FAQ-color;
-  min-height: $content-min-height;
 }
 
 .FAQ__content {
   background-color: $FAQ-color;
   color: $white;
+  min-height: $content-min-height;
   padding: $xs-size;
-  text-align: center;
+  // text-align: justify;
 
-  &--details {
-    color: $white;
+  @media (min-width: $desktop-breakpoint) {
+    @include flexbox(center, center);
   }
 }
 
@@ -26,7 +26,41 @@
   padding: $s-size;
 }
 
+.FAQ__text {
+  min-height: 20vh;
+}
+
 .FAQ__link {
+  display: inline;
   font-style: italic;
+  text-align: center;
   text-decoration: underline;
+
+  &--bottom {
+    display: block;
+    flex-basis: 100%;
+    margin: $m-size;
+    text-decoration: none;
+  }
+}
+
+.FAQ__buttons {
+  @media (min-width: $desktop-breakpoint) {
+    @include flexbox(center, space-around);
+    flex-basis: 100%;
+  }
+}
+
+.FAQ__button {
+  @media (min-width: $desktop-breakpoint) {
+    color: $FAQ-color;
+    flex-basis: 30%;
+    transition: .3s;
+
+    &:hover {
+      border: 2px solid $white;
+      background-color: $FAQ-color;
+      color: $white;
+    }
+  }
 }

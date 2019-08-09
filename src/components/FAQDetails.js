@@ -19,7 +19,7 @@ const FAQDetails = ({ match }) => {
             <p className="text"><strong>Tip:</strong>If you’re thinking, “That’s nothing special. Everyone feels that way sometimes!” <em>…you are likely not a highly sensitive person.</em></p>
             <p className="text">Highly sensitive people know from long experience that they feel things far more strongly than others do. They have seen firsthand how they’re different.</p>
             <p className="text">Often, it’s also noticed and remarked on by others, with comments like, “You noticed that?” “Why does that bother you?” “I dunno, it doesn’t seem loud/cold/hot to me…” or “You’re too sensitive.”</p>
-            <a className="link FAQ__link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
+            <a className="link FAQ__link FAQ__link--bottom" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
           </>
         )
 
@@ -34,7 +34,7 @@ const FAQDetails = ({ match }) => {
               <li className="text"><strong>Being highly sensitive comes with both advantages and drawbacks. </strong>Highly sensitive people tend to be empathetic, artistically creative, intuitive, and highly aware of the needs of others — so much so that many thrive in careers as therapists, counsellors, artists, musicians, and writers. But highly sensitive people also deal with overwhelm, exhaustion, and burnout, especially from “absorbing” or sensing all the emotional cues of the people around them. Loud, crowded, or visually busy spaces can also overwhelm sensitive people — any strong sensory input can.</li>
             </ul>
             <p className="text">Because of their need to spend time alone, highly sensitive people are often confused with introverts. The truth is that anyone can be highly sensitive, whether introverted, extroverted, or anywhere in between.</p>
-            <a className="link FAQ__link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
+            <a className="link FAQ__link FAQ__link--bottom" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
           </>
         )
 
@@ -48,20 +48,20 @@ const FAQDetails = ({ match }) => {
 
             <p className="text">Today, Dr. Aron focuses on four main traits that define a highly sensitive person, represented by the acronym D.O.E.S.:</p>
 
-            <h3>Depth of Processing</h3>
+            <h3 className="subtitle">Depth of Processing</h3>
 
             <p className="text">HSPs tend to process information more deeply than others. For example, if someone tells an HSP their address, the HSP may mentally repeat it over and over, or compare the street name to other similar-sounding words andd names. They may notice a metaphorical connection between the street name and other ideas.</p>
 
             <p className="text">This has a practical use — it means they are very unlikely to forget the address — and it’s also part of what makes HSPs so artistically creative. But it also means that their nervous system is processing every piece of information over and over, often magnifying it. This is the foundational trait of highly sensitive people, and it’s what gives HSPs a sense of “burnout” or overload. Which brings us to…</p>
 
-            <h3>Overstimulation</h3>
+            <h3 className="subtitle">Overstimulation</h3>
 
             <p className="text">Processing every little detail, all the time, is exhausting. Since an HSP will take in and think about details that most people never even notice, they are de facto performing more cognitive work than the average person — all day long. Thus, it’s only natural that an HSP will feel exhausted in situations where others feel fine.</p>
 
             <p className="text">Examples include being able to only plan one or two things in a day of travel, not a packed itinerary; wanting a moment of quiet, without conversation, when others want to keep talking; or wishing to go to a low-key, chill environment rather than a busy restaurant or high-energy club. HSPs can handle high-stimulus environments, but only for shorter periods, and only if they come into them “fresh” for the day.</p>
 
 
-            <h3>Empathy (or Emotional Reactivity)</h3>
+            <h3 className="subtitle">Empathy (or Emotional Reactivity)</h3>
 
             <p className="text"><strong>Emotional reactivity&nbsp;</strong>means that HSPs have a stronger reaction to both positive and negative experiences. However, <a className="link FAQ__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4086365/" target="_blank" rel="noopener noreferrer">research has shown</a> that this effect is particularly pronounced in relation to&nbsp;<em>positive&nbsp;</em>experiences — or even pictures of a positive event. Positive settings help rocket HSPs into not only a good emotional state, but better creativity and thinking as well. This may be part of the reason most HSPs seek to create a private refuge (which they often want no one else to enter) where they can control their surroundings and create the atmosphere they need.</p>
 
@@ -69,18 +69,18 @@ const FAQDetails = ({ match }) => {
 
             <p className="text">For an HSP, the experience of empathy is not just “understanding” someone’s emotions. Many HSPs feel that they absorb emotions even when someone isn’t visibly expressing them, or pick up on emotions from <em>places</em> as well as <em>people</em>.</p>
 
-            <h3>Sensitivity to Subtleties</h3>
+            <h3 className="subtitle">Sensitivity to Subtleties</h3>
 
             <p className="text">HSPs are naturals when it comes to picking up on subtle cues or stimuli that others miss. This doesn’t mean they have super-hearing or vision; it’s simply what happens when the nervous system is wired to process every sense impression deeply. The result is that HSPs will notice small sounds, tiny distractions, smells, or tastes that others don’t seem to even be aware of. (This can feed into being overstimulated, since most workplaces are designed for people who aren’t distracted or bothered by such “tiny” details!)</p>
 
             <p className="text">You may identify with some of these traits more than others. But if you found yourself nodding along with most of them, there’s a good chance you’re a highly sensitive person.</p>
-            <a className="link FAQ__link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
+            <a className="link FAQ__link FAQ__link--bottom" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
           </>
         )
     }
   }
   return (
-    <div className="FAQ__content FAQ__content--details">
+    <div className="FAQ__content">
       {setContent(match.params.id)}
       <Link className="link button FAQ__button" to='/faq'>Return</Link>
     </div>

@@ -33,33 +33,32 @@ $animation-duration: 3s;
 }
 
 .header__title {
-
   // animation: fadeOut $animation-duration 1;
 }
 
-// .header__text {
-//   &:nth-child(2) {
-//     @include animation($animation-duration * 1)
-//   }
+.header__text {
+  // &:nth-child(2) {
+  //   @include animation($animation-duration * 1)
+  // }
 
-//   &:nth-child(3) {
-//     @include animation($animation-duration * 2)
-//   }
+  // &:nth-child(3) {
+  //   @include animation($animation-duration * 2)
+  // }
 
-//   &:nth-child(4) {
-//     @include animation($animation-duration * 3)
-//   }
+  // &:nth-child(4) {
+  //   @include animation($animation-duration * 3)
+  // }
 
-//   &:nth-child(5) {
-//     @include animation($animation-duration * 4)
-//   }
+  // &:nth-child(5) {
+  //   @include animation($animation-duration * 4)
+  // }
 
-//   &:nth-child(6) {
-//     @include animation($animation-duration * 5)
-//   }
-// }
+  // &:nth-child(6) {
+  //   @include animation($animation-duration * 5)
+  // }
+}
 
-.header__links {
+.header__buttons {
   @include flexbox(center, center);
 
   @media (min-width: $desktop-breakpoint) {
@@ -68,7 +67,7 @@ $animation-duration: 3s;
   }
 }
 
-.header__link {
+.header__button {
   flex-basis: 100%;
   margin: $s-size;
 
