@@ -1,10 +1,9 @@
 .FAQ {
-  // background: url('/images/bg-2.jpg') no-repeat center;
-  // background-size: cover;
+  background-color: $FAQ-color;
+  min-height: $content-min-height;
 }
 
 .FAQ__content {
-  background-color: $FAQ-color;
   color: $white;
   padding: $xs-size;
   text-align: center;

@@ -1,10 +1,14 @@
 .nav {
-  // background-color: white;
+  flex-basis: 100%;
   height: $nav-heigth;
   position: relative;
 
   @media (orientation: landscape) {
     height: $nav-heigth + 4vh;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    height: auto;
   }
 }
 
@@ -15,6 +19,10 @@
   height: 100%;
   position: relative;
   z-index: 2;
+
+  @media (min-width: $desktop-breakpoint) {
+    display: none;
+  }
 }
 
 .nav__button {
@@ -36,8 +44,6 @@
   @include flexbox(center, center);
   border-top: 1px solid $white;
   background-color: $black;
-  color: $white;
-  flex-basis: 100%;
   left: 0;
   list-style: none;
   margin: 0;
@@ -51,6 +57,15 @@
   &--hidden {
     top: -80vh;
   }
+
+  @media (min-width: $desktop-breakpoint) {
+    background-color: $white;
+    border: none;
+
+    &--hidden {
+      top: 0
+    }
+  }
 }
 
 .nav__item {
@@ -60,5 +75,58 @@
 
   &:last-child {
     border-bottom: none;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    border: none;
+    flex-basis: 20%;
+    padding: $s-size 0;
+
+    &:nth-child(1)>.link {
+      &:hover {
+        background-color: $home-page-color;
+      }
+    }
+
+    &:nth-child(2)>.link {
+      &:hover {
+        background-color: $FAQ-color;
+      }
+    }
+
+    &:nth-child(3)>.link {
+      &:hover {
+        background-color: $stats-color;
+      }
+    }
+
+    &:nth-child(4)>.link {
+      &:hover {
+        background-color: $quiz-color;
+      }
+    }
+  }
+}
+
+.nav__link {
+  @media (min-width: $desktop-breakpoint) {
+    color: black;
+    font-size: $font-size-l;
+    letter-spacing: 2px;
+    padding: $m-size 0;
+    transition: .2s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.nav__text {
+  margin: 0;
+  padding: $m-size 0;
+
+  @media (min-width: $desktop-breakpoint) {
+    flex-basis: 20%;
   }
 }

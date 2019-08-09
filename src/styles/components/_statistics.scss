@@ -1,5 +1,5 @@
 .statistics {
   background-color: $stats-color;
-  min-height: 50vh;
+  min-height: $content-min-height;
   padding: $xs-size;
 }

@@ -14,10 +14,10 @@ export const Nav = () => {
       </div>
 
       <ul className="nav__list nav__list--hidden">
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/"> <p><i className="fas fa-home"></i></p> </Link></li>
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/faq"> <p>FAQ</p> </Link></li>
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/statistics"> <p>Statistics</p> </Link></li>
-        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link" to="/quiz"> <p>Quiz</p></Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link nav__link" to="/"> <p className="nav__text"><i className="fas fa-home"></i></p> </Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link nav__link" to="/faq"> <p className="nav__text">FAQ</p> </Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link nav__link" to="/statistics"> <p className="nav__text">Statistics</p> </Link></li>
+        <li onClick={toggleMenuVisibility} className="nav__item"><Link className="link nav__link" to="/quiz"> <p className="nav__text">Quiz</p></Link></li>
       </ul>
     </nav>
   );

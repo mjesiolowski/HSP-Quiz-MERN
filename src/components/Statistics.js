@@ -46,7 +46,6 @@ const Statistics = ({ isHSPScore }) => {
       <Link
         className="link button"
         to='/'
-        onClick={() => handleClick()}
       >RETURN</Link>
     </div>
   )
