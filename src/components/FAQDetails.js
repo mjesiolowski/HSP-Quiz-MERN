@@ -19,7 +19,7 @@ const FAQDetails = ({ match }) => {
             <p className="text"><strong>Tip:</strong>If you’re thinking, “That’s nothing special. Everyone feels that way sometimes!” <em>…you are likely not a highly sensitive person.</em></p>
             <p className="text">Highly sensitive people know from long experience that they feel things far more strongly than others do. They have seen firsthand how they’re different.</p>
             <p className="text">Often, it’s also noticed and remarked on by others, with comments like, “You noticed that?” “Why does that bother you?” “I dunno, it doesn’t seem loud/cold/hot to me…” or “You’re too sensitive.”</p>
-            <a className="link link--FAQ" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
+            <a className="link FAQ__link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
           </>
         )
 
@@ -34,7 +34,7 @@ const FAQDetails = ({ match }) => {
               <li className="text"><strong>Being highly sensitive comes with both advantages and drawbacks. </strong>Highly sensitive people tend to be empathetic, artistically creative, intuitive, and highly aware of the needs of others — so much so that many thrive in careers as therapists, counsellors, artists, musicians, and writers. But highly sensitive people also deal with overwhelm, exhaustion, and burnout, especially from “absorbing” or sensing all the emotional cues of the people around them. Loud, crowded, or visually busy spaces can also overwhelm sensitive people — any strong sensory input can.</li>
             </ul>
             <p className="text">Because of their need to spend time alone, highly sensitive people are often confused with introverts. The truth is that anyone can be highly sensitive, whether introverted, extroverted, or anywhere in between.</p>
-            <a className="link link--FAQ" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
+            <a className="link FAQ__link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
           </>
         )
 
@@ -44,7 +44,7 @@ const FAQDetails = ({ match }) => {
             <h2 className="title">4 Science-Based Traits That Define a Highly Sensitive Person</h2>
             <p className="text">If you’ve often been told that you feel things “too” deeply, are “too” sensitive, or that you “feel too much,” you’re likely a highly sensitive person. (The truth is, you aren’t “too” much of anything. You simply have a very unique and powerful personality trait that comes with both pros and cons.) But to be sure, it helps to understand the traits of a highly sensitive person — and see which ones you experience yourself.</p>
 
-            <p className="text">Luckily, those traits have been well-studied in both humans and animals for more than 20 years. It appears that the many of the experiences shared by HSPs boil down to just a few foundational traits. These traits were <a className="link link--FAQ" href="http://psycnet.apa.org/record/1997-05290-010" target="_blank" rel="noopener noreferrer">originally documented</a> by Dr. Elaine Aron, and have been expanded and <a className="link link--FAQ" href="https://www.researchgate.net/publication/319974199_Environmental_Sensitivity_in_Children_Development_of_the_Highly_Sensitive_Child_Scale_and_Identification_of_Sensitivity_Groups" target="_blank" rel="noopener noreferrer">verified</a> by other researchers.</p>
+            <p className="text">Luckily, those traits have been well-studied in both humans and animals for more than 20 years. It appears that the many of the experiences shared by HSPs boil down to just a few foundational traits. These traits were <a className="link link--FAQ" href="http://psycnet.apa.org/record/1997-05290-010" target="_blank" rel="noopener noreferrer">originally documented</a> by Dr. Elaine Aron, and have been expanded and <a className="link FAQ__link" href="https://www.researchgate.net/publication/319974199_Environmental_Sensitivity_in_Children_Development_of_the_Highly_Sensitive_Child_Scale_and_Identification_of_Sensitivity_Groups" target="_blank" rel="noopener noreferrer">verified</a> by other researchers.</p>
 
             <p className="text">Today, Dr. Aron focuses on four main traits that define a highly sensitive person, represented by the acronym D.O.E.S.:</p>
 
@@ -63,7 +63,7 @@ const FAQDetails = ({ match }) => {
 
             <h3>Empathy (or Emotional Reactivity)</h3>
 
-            <p className="text"><strong>Emotional reactivity&nbsp;</strong>means that HSPs have a stronger reaction to both positive and negative experiences. However, <a className="link link--FAQ" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4086365/" target="_blank" rel="noopener noreferrer">research has shown</a> that this effect is particularly pronounced in relation to&nbsp;<em>positive&nbsp;</em>experiences — or even pictures of a positive event. Positive settings help rocket HSPs into not only a good emotional state, but better creativity and thinking as well. This may be part of the reason most HSPs seek to create a private refuge (which they often want no one else to enter) where they can control their surroundings and create the atmosphere they need.</p>
+            <p className="text"><strong>Emotional reactivity&nbsp;</strong>means that HSPs have a stronger reaction to both positive and negative experiences. However, <a className="link FAQ__link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4086365/" target="_blank" rel="noopener noreferrer">research has shown</a> that this effect is particularly pronounced in relation to&nbsp;<em>positive&nbsp;</em>experiences — or even pictures of a positive event. Positive settings help rocket HSPs into not only a good emotional state, but better creativity and thinking as well. This may be part of the reason most HSPs seek to create a private refuge (which they often want no one else to enter) where they can control their surroundings and create the atmosphere they need.</p>
 
             <p className="text"><strong>Empathy&nbsp;</strong>means just that: HSPs are more aware of the emotions of others, they think about what others needs, and they are concerned with helping others. The brain of a highly sensitive person reacts more strongly to images of other people’s faces showing emotion, and their “mirror neurons” — the part of the brain that helps us understand and empathize with the emotions of others — are particularly active.</p>
 
@@ -74,7 +74,7 @@ const FAQDetails = ({ match }) => {
             <p className="text">HSPs are naturals when it comes to picking up on subtle cues or stimuli that others miss. This doesn’t mean they have super-hearing or vision; it’s simply what happens when the nervous system is wired to process every sense impression deeply. The result is that HSPs will notice small sounds, tiny distractions, smells, or tastes that others don’t seem to even be aware of. (This can feed into being overstimulated, since most workplaces are designed for people who aren’t distracted or bothered by such “tiny” details!)</p>
 
             <p className="text">You may identify with some of these traits more than others. But if you found yourself nodding along with most of them, there’s a good chance you’re a highly sensitive person.</p>
-            <a className="link link--FAQ" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
+            <a className="link FAQ__link" href="https://highlysensitiverefuge.com/what-is-highly-sensitive-person/" target='_blank' rel="noopener noreferrer">Source</a>
           </>
         )
     }

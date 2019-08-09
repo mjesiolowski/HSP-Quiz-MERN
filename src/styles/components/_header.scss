@@ -1,6 +1,29 @@
+@mixin animation($delay) {
+  animation: fadeOut 3s 1 forwards;
+  animation-delay: $delay;
+  opacity: 0;
+}
+
+$animation-duration: 3s;
+
+
 .header {
   background-color: $home-page-color;
   min-height: $content-min-height;
+
+  @media (min-width: $desktop-breakpoint) {
+    @include flexbox(center, center);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1
+  }
 }
 
 .header__content {
@@ -9,11 +32,55 @@
   text-align: center;
 }
 
+.header__title {
+
+  // animation: fadeOut $animation-duration 1;
+}
+
+// .header__text {
+//   &:nth-child(2) {
+//     @include animation($animation-duration * 1)
+//   }
+
+//   &:nth-child(3) {
+//     @include animation($animation-duration * 2)
+//   }
+
+//   &:nth-child(4) {
+//     @include animation($animation-duration * 3)
+//   }
+
+//   &:nth-child(5) {
+//     @include animation($animation-duration * 4)
+//   }
+
+//   &:nth-child(6) {
+//     @include animation($animation-duration * 5)
+//   }
+// }
+
 .header__links {
   @include flexbox(center, center);
+
+  @media (min-width: $desktop-breakpoint) {
+    @include flexbox(center, space-around);
+    flex-basis: 100%;
+  }
 }
 
 .header__link {
   flex-basis: 100%;
-  margin: $xs-size 0;
+  margin: $s-size;
+
+  @media (min-width: $desktop-breakpoint) {
+    color: $home-page-color;
+    flex-basis: 30%;
+    transition: .3s;
+
+    &:hover {
+      border: 2px solid $white;
+      background-color: $home-page-color;
+      color: $white;
+    }
+  }
 }

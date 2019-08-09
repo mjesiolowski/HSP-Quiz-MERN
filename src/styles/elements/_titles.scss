@@ -4,4 +4,8 @@
   margin: 0;
   padding: $s-size 0;
   text-align: center;
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: $font-size-xxl;
+  }
 }

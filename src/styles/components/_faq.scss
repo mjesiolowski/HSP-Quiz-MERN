@@ -4,6 +4,7 @@
 }
 
 .FAQ__content {
+  background-color: $FAQ-color;
   color: $white;
   padding: $xs-size;
   text-align: center;
@@ -23,4 +24,9 @@
   background-color: darken($FAQ-color, 10%);
   margin: $s-size 0;
   padding: $s-size;
+}
+
+.FAQ__link {
+  font-style: italic;
+  text-decoration: underline;
 }

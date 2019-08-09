@@ -14,6 +14,12 @@ body {
   line-height: 1.6;
 }
 
+.wrapper {
+  box-shadow: 0 0 15px 10px rgb(200, 200, 200);
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 button {
   cursor: pointer;
 }

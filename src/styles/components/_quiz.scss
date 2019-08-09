@@ -16,12 +16,11 @@ $neutral-color: #9e9e9e;
 }
 
 .quiz {
-  // background: url('/images/bg-3.jpg') no-repeat left;
-  // background-size: cover;
+  background-color: $quiz-color;
+  padding: $s-size;
 }
 
 .quiz__content {
-  background-color: $quiz-color;
   color: $white;
   padding: $xs-size $xs-size 0 $xs-size;
   text-align: center;
