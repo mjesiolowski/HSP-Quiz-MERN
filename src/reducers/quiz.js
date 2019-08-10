@@ -2,7 +2,7 @@ const quizDefaultState = {
   answeredCount: 0,
   points: 0,
   currentSet: 1,
-  completedSteps: 0,
+  completedSteps: 1,
   singleQuestionHighestScore: 4,
   isHSPScore: 60
 }
@@ -28,6 +28,15 @@ export const quizReducer = (state = quizDefaultState, action) => {
       return {
         ...state,
         completedSteps: state.completedSteps + 1
+      }
+
+    case 'RESET_SETTINGS':
+      return {
+        ...state,
+        answeredCount: 0,
+        currentSet: 1,
+        completedSteps: 0,
+        points: 0
       }
     default: return state
   }

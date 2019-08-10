@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { incrementCompletedSteps } from '../actions/quiz'
+import { incrementCompletedSteps, resetSettings } from '../actions/quiz'
 import { setUser } from '../actions/user'
 
-const QuizInfo = ({ incrementCompletedSteps, setUser }) => {
+const QuizInfo = ({ incrementCompletedSteps, resetSettings, setUser }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    resetSettings()
   }, [])
+
+
 
   const [userAge, setUserAge] = useState(0)
   const [userGender, setUserGender] = useState("M")
@@ -95,7 +98,6 @@ const QuizInfo = ({ incrementCompletedSteps, setUser }) => {
         <Link
           className="link button"
           to='/'
-          onClick={() => handleClick()}
         >RETURN</Link>
       </div>
     </div>
@@ -104,7 +106,8 @@ const QuizInfo = ({ incrementCompletedSteps, setUser }) => {
 
 const mapDispatchToProps = (dispatch) => ({
   incrementCompletedSteps: () => dispatch(incrementCompletedSteps()),
-  setUser: (user) => dispatch(setUser(user))
+  resetSettings: () => dispatch(resetSettings()),
+  setUser: (user) => dispatch(setUser(user)),
 })
 
 

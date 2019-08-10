@@ -47,7 +47,7 @@ const Results = ({ age, gender, isHSPScore, points, singleQuestionHighestScore }
 
   return (
     <div className="results">
-      <p className="text">Your result: <strong>{result}%</strong></p>
+      <h2 className="title">Your result: <strong>{result}%</strong></h2>
       <p className="text">{renderResults(result, isHSPScore)}</p>
       {isDataPosted ? <Statistics /> : <p className="text">Saving results...</p>}
     </div>

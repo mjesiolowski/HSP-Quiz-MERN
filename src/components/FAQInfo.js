@@ -28,10 +28,6 @@ const FAQInfo = () => {
 
         <FAQContent content={contentState} />
       </div>
-
-
-
-
     </section>
   )
 }

@@ -14,3 +14,7 @@ export const incrementSet = () => ({
 export const incrementCompletedSteps = () => ({
   type: 'INCREMENT_STEPS',
 })
+
+export const resetSettings = () => ({
+  type: 'RESET_SETTINGS',
+})
