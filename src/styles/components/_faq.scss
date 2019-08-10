@@ -7,7 +7,6 @@
   color: $white;
   min-height: $content-min-height;
   padding: $xs-size;
-  // text-align: justify;
 
   @media (min-width: $desktop-breakpoint) {
     @include flexbox(center, center);
@@ -27,7 +26,7 @@
 }
 
 .FAQ__text {
-  min-height: 20vh;
+  min-height: 25vh;
 }
 
 .FAQ__link {
@@ -45,8 +44,9 @@
 }
 
 .FAQ__button {
+  margin: $s-size 0;
+
   @media (min-width: $desktop-breakpoint) {
     @include button-color($FAQ-color)
   }
-
 }

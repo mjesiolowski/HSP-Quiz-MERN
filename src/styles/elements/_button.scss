@@ -1,8 +1,10 @@
 .buttons {
   @include flexbox(center, center);
+  flex-grow: 1;
 
   @media (min-width: $desktop-breakpoint) {
     @include flexbox(center, space-around);
+    flex-grow: 0;
     flex-basis: 100%;
     margin: 0 $xl-size;
   }
@@ -11,6 +13,7 @@
 .buttons--vertical {
   flex-direction: column-reverse;
   flex-basis: 40%;
+
 }
 
 .button {

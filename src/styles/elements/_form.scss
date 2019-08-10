@@ -5,7 +5,8 @@
 
 .form__label {
   flex-basis: 100%;
-  padding: $xs-size
+  padding: $xs-size;
+  text-align: center;
 }
 
 .form__select {
@@ -15,6 +16,10 @@
   padding: $xs-size 0;
   text-align: center;
   width: 100%;
+
+  @media(min-width: $desktop-breakpoint) {
+    padding: $s-size 0;
+  }
 }
 
 .form__input {
@@ -22,6 +27,11 @@
 }
 
 .form__alert {
-  font-size: $font-size-s;
-  margin: 0;
+  font-size: $font-size-xs;
+  margin: $m-size;
+
+  @media(min-width: $desktop-breakpoint) {
+    font-size: $font-size-s;
+    margin: $l-size 0 0 0;
+  }
 }

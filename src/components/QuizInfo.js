@@ -6,10 +6,10 @@ import { setUser } from '../actions/user'
 
 const QuizInfo = ({ incrementCompletedSteps, resetSettings, setUser }) => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    resetSettings()
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  //   resetSettings()
+  // }, [])
 
 
 
@@ -55,50 +55,55 @@ const QuizInfo = ({ incrementCompletedSteps, resetSettings, setUser }) => {
       </p>
 
         <p className="text">
-          To find out, take these 20 questions quiz below.
+          To find out, take these <strong>20 questions</strong> quiz below.
       </p>
+      </div>
 
-
-        <form
-          className="form"
-          onSubmit={(e) => { e.preventDefault() }}>
-          <label
-            className="form__label">
-            Gender:
+      <form
+        className="quiz__form form"
+        onSubmit={(e) => { e.preventDefault() }}>
+        <label
+          className="form__label text">
+          Gender:
         <select
-              className="form__select"
-              name="gender"
-              value={userGender}
-              onChange={(e) => setUserGender(e.target.value)}
-            >
-              <option
-                value="M">Male</option>
-              <option
-                value="F">Female</option>
-            </select>
-          </label>
-
-          <label
-            className="form__label"
+            className="form__select"
+            name="gender"
+            value={userGender}
+            onChange={(e) => setUserGender(e.target.value)}
           >
-            Age:
+            <option
+              value="M">Male</option>
+            <option
+              value="F">Female</option>
+          </select>
+        </label>
+
+        <label
+          className="form__label text"
+        >
+          Age:
           <input
-              className="form__input"
-              type="number"
-              value={userAge}
-              onChange={(e) => setUserAge(parseInt(e.target.value, 10))} />
-            {userAge <= 0 && <p className="form__alert" style={{ color: '#f4511e' }}>Please remember to provide your age.</p>}
-          </label>
-        </form>
+            className="form__input"
+            type="number"
+            value={userAge}
+            onChange={(e) => setUserAge(parseInt(e.target.value, 10))} />
+          <p
+            className="form__alert"
+            style={userAge <= 0 ? { color: '#f4511e', opacity: 1 } : { opacity: 0 }}>
+            Please remember to provide your age.</p>
+        </label>
+      </form>
+
+      <div className="buttons buttons--vertical">
         <Link
-          className="link button"
+          className="quiz__button link button"
+          to='/'
+        >RETURN</Link>
+        <Link
+          className="quiz__button link button"
           to='/quiz/start'
           onClick={() => handleClick()}
         >START</Link>
-        <Link
-          className="link button"
-          to='/'
-        >RETURN</Link>
       </div>
     </div>
   )

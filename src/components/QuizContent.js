@@ -53,17 +53,20 @@ const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
         {renderQuestions(questions, false, { ...quizPageParameters })}
         {renderQuestions(oppositeQuestions, true, { ...quizPageParameters })}
 
-        {currentSet < quizPageParameters.maxSetsNumber() ?
-          <button
-            className='button link quiz__button'
-            onClick={() => handleNextButton(quizPageParameters)}
-          >Next</button> :
-          <NavLink
-            className='button link quiz__button'
-            to="/results"
-            onClick={(e) => handleResultsButton(e, quizPageParameters)}
-          >RESULTS</NavLink>
-        }
+        <div className="buttons">
+          {currentSet < quizPageParameters.maxSetsNumber() ?
+            <button
+              className='button link quiz__button'
+              onClick={() => handleNextButton(quizPageParameters)}
+            >Next</button> :
+            <NavLink
+              className='button link quiz__button'
+              to="/results"
+              onClick={(e) => handleResultsButton(e, quizPageParameters)}
+            >RESULTS</NavLink>
+          }
+        </div>
+
       </div>
     </div>
   )
