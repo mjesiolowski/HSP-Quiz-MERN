@@ -41,12 +41,19 @@ const Statistics = ({ isHSPScore }) => {
 
   return (
     <div className="statistics">
-      <h2 className="title">Statistics</h2>
-      {renderStats()}
-      <Link
-        className="link button"
-        to='/'
-      >RETURN</Link>
+
+      <div className="statistics__content">
+        <h2 className="title">Statistics</h2>
+        {renderStats()}
+      </div>
+
+      <div className="statistics__buttons buttons">
+        <Link
+          className="statistics__button link button"
+          to='/'
+        >RETURN</Link>
+      </div>
+
     </div>
   )
 }

@@ -19,7 +19,7 @@ const FAQContent = ({ content }) => {
   return (
     <>
       <div className="FAQ__text"><p className="text">{setContent(content)}</p></div>
-      <div className="FAQ__buttons">
+      <div className="buttons buttons--vertical">
         <Link
           className="FAQ__button link button"
           to="/"

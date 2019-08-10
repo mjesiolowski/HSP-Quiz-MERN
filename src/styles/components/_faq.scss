@@ -44,23 +44,9 @@
   }
 }
 
-.FAQ__buttons {
-  @media (min-width: $desktop-breakpoint) {
-    @include flexbox(center, space-around);
-    flex-basis: 100%;
-  }
-}
-
 .FAQ__button {
   @media (min-width: $desktop-breakpoint) {
-    color: $FAQ-color;
-    flex-basis: 30%;
-    transition: .3s;
-
-    &:hover {
-      border: 2px solid $white;
-      background-color: $FAQ-color;
-      color: $white;
-    }
+    @include button-color($FAQ-color)
   }
+
 }

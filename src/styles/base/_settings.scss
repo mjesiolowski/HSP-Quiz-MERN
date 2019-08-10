@@ -5,6 +5,18 @@
   justify-content: $justify
 }
 
+@mixin button-color($color) {
+  color: $color;
+  flex-basis: 40%;
+  transition: .3s;
+
+  &:hover {
+    border: 2px solid $white;
+    background-color: $color;
+    color: $white;
+  }
+}
+
 // Colors
 $transparent-black: rgba(20, 20, 20, .95);
 $black: #131313;

@@ -58,28 +58,10 @@ $animation-duration: 3s;
   // }
 }
 
-.header__buttons {
-  @include flexbox(center, center);
 
-  @media (min-width: $desktop-breakpoint) {
-    @include flexbox(center, space-around);
-    flex-basis: 100%;
-  }
-}
 
 .header__button {
-  flex-basis: 100%;
-  margin: $s-size;
-
   @media (min-width: $desktop-breakpoint) {
-    color: $home-page-color;
-    flex-basis: 30%;
-    transition: .3s;
-
-    &:hover {
-      border: 2px solid $white;
-      background-color: $home-page-color;
-      color: $white;
-    }
+    @include button-color($home-page-color)
   }
 }

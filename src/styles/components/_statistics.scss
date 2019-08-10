@@ -1,5 +1,28 @@
 .statistics {
+  @include flexbox(flex-start, center);
   background-color: $stats-color;
   min-height: $content-min-height;
   padding: $xs-size;
+}
+
+.statistics__content {
+  min-height: 50vh;
+}
+
+.statistics__buttons {
+  // @include flexbox(flex-end, center);
+
+  width: 100%;
+}
+
+.statistics__button {
+  @media (min-width: $desktop-breakpoint) {
+    @include button-color($stats-color);
+    color: $transparent-black;
+
+    &:hover {
+      border: 2px solid $transparent-black;
+      color: $transparent-black;
+    }
+  }
 }
