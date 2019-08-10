@@ -44,9 +44,5 @@
 }
 
 .FAQ__button {
-  margin: $s-size 0;
-
-  @media (min-width: $desktop-breakpoint) {
-    @include button-color($FAQ-color)
-  }
+  @include button-color($FAQ-color);
 }

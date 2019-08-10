@@ -28,7 +28,7 @@ const QuizInfo = ({ incrementCompletedSteps, resetSettings, setUser }) => {
   }
 
   return (
-    <div className="quiz">
+    <section className="quiz">
       <div className="quiz__content">
         <h2 className="title">About the quiz</h2>
         <p className="text">
@@ -105,7 +105,7 @@ const QuizInfo = ({ incrementCompletedSteps, resetSettings, setUser }) => {
           onClick={() => handleClick()}
         >START</Link>
       </div>
-    </div>
+    </section>
   )
 }
 

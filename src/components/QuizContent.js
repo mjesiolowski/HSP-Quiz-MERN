@@ -44,7 +44,7 @@ const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
   }
 
   return (
-    <div className="quiz">
+    <section className="quiz">
       <div className="quiz__content">
         <div className="quiz__progress-bar">
           <div className="quiz__progress-bar-filler"></div>
@@ -68,7 +68,7 @@ const QuizContent = ({ answeredCount, currentSet, incrementSet }) => {
         </div>
 
       </div>
-    </div>
+    </section>
   )
 }
 

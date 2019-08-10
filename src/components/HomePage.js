@@ -36,7 +36,7 @@ const HomePage = () => {
       </div>
 
       <div className="buttons">
-        <Link className="header__button link button" to="/faq">I want to know more</Link>
+        <Link className="header__button link button" to="/faq">Wanna know more</Link>
         <Link className="header__button link button" to="/quiz">Take the quiz</Link>
       </div>
     </header>

@@ -10,10 +10,12 @@
   flex-basis: 40%;
   transition: .3s;
 
-  &:hover {
-    border: 2px solid $white;
-    background-color: $color;
-    color: $white;
+  @media (min-width: $desktop-breakpoint) {
+    &:hover {
+      border: 2px solid $white;
+      background-color: $color;
+      color: $white;
+    }
   }
 }
 

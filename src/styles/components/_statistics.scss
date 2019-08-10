@@ -16,13 +16,15 @@
 }
 
 .statistics__button {
+  @include button-color($stats-color);
+  color: $transparent-black;
+  flex-basis: 100%;
+
   @media (min-width: $desktop-breakpoint) {
-    @include button-color($stats-color);
-    color: $transparent-black;
+    flex-basis: 40%;
 
     &:hover {
       border: 2px solid $transparent-black;
-      color: $transparent-black;
     }
   }
 }

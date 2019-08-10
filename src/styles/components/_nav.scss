@@ -119,6 +119,13 @@
     &:hover {
       color: $white;
     }
+
+    &--dark {
+
+      &:hover {
+        color: $black;
+      }
+    }
   }
 }
 

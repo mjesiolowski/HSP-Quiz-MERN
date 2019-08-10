@@ -10,6 +10,7 @@ $animation-duration: 3s;
 .header {
   background-color: $home-page-color;
   min-height: $content-min-height;
+  padding: $xs-size;
 
   @media (min-width: $desktop-breakpoint) {
     @include flexbox(center, center);
@@ -61,7 +62,10 @@ $animation-duration: 3s;
 
 
 .header__button {
+  @include button-color($home-page-color);
+  flex-basis: 100%;
+
   @media (min-width: $desktop-breakpoint) {
-    @include button-color($home-page-color)
+    flex-basis: 40%;
   }
 }
