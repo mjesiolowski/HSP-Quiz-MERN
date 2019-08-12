@@ -6,12 +6,10 @@ import { setUser } from '../actions/user'
 
 const QuizInfo = ({ incrementCompletedSteps, resetSettings, setUser }) => {
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  //   resetSettings()
-  // }, [])
-
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    resetSettings()
+  }, [])
 
   const [userAge, setUserAge] = useState(0)
   const [userGender, setUserGender] = useState("M")

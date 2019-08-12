@@ -25,7 +25,7 @@ const HomePage = () => {
           Do loud music and crowded places make you get irritated and overwhlemed, but at the same time you enjoy the company of your friends?
       </p>
         <p className="header__text text">
-          Do you get this feeling that everyone around has much more energy that you?
+          Does it fell like everyone around you has much more energy that you?
     </p>
         {/* <p className="text">
         ...and this sudden "I need it now" request from you boss that ruins your well-planned schedule.

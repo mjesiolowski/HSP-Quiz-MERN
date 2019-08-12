@@ -21,8 +21,15 @@
 
 .FAQ__item {
   background-color: darken($FAQ-color, 10%);
+  cursor: pointer;
   margin: $s-size 0;
   padding: $s-size;
+  transition: .3s;
+
+  &--active {
+    background-color: $white;
+    color: $FAQ-color;
+  }
 }
 
 .FAQ__text {
