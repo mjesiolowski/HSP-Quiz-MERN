@@ -1,0 +1,23 @@
+.notFound {
+  @include flexbox (center, center);
+  min-height: $content-min-height;
+  padding: $m-size;
+}
+
+.notFound__text {
+  flex-basis: 100%;
+}
+
+.notFound__button {
+  border: 2px solid black;
+  color: black;
+  transition: .3s;
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 40%;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
