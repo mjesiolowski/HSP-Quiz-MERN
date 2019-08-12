@@ -19,7 +19,6 @@ const Results = ({ age, gender, isHSPScore, points, singleQuestionHighestScore }
 
   const renderResults = (result, isHSPScore) => {
 
-    console.log(result)
     if (result >= isHSPScore) {
       return 'There is a quite high chance that you are one of highly sensitive persons. Being highly sensitive is a normal trait. Approximately 15 to 20 percent of the population has the gene that makes them highly sensitive. Now that you got this knowledge, I encourage you to dive deeper into HSP’s traits as it is essential for your personal growth.'
     } else if (result < isHSPScore && result >= isHSPScore - (isHSPScore / 3)) {
@@ -28,7 +27,7 @@ const Results = ({ age, gender, isHSPScore, points, singleQuestionHighestScore }
   }
 
   useEffect(() => {
-    axios.post('http://localhost:3000/stats/', {
+    axios.post(process.env.MONGODB_URL + '/stats/', {
       gender,
       age,
       result,
