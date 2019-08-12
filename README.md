@@ -13,6 +13,12 @@ There are four main sections to navigate to:
 - \quiz - Quiz section - you can start the 20 questions quiz here
 - \statistics - quiz summary
 
+## The biggest challenge
+There was a couple:
+- first of all, it was my first attempt to create a website with both front-end and back-end built from scratch
+- routing - I implemented private routes, so that it is not possible to get access to certain areas of the website without correct validation
+- quiz logic - the quiz consists of two sets of questions (pro-HSP and anti-HSP) - it is crucial to compute points correctly, having in mind the sets' length and diversity
+- modifiable content - my intention was to make the code easy to modify, meaning you can manipulate the sets number\length without changing the code structure; furthermore, you can easily modify variables with HSP score treshold, the highest possible score or questions per page
 
 ## Technology used:
 React (with React Router and React Hooks),
