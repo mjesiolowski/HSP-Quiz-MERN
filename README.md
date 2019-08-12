@@ -25,7 +25,7 @@ React (with React Router and React Hooks),
 Redux,
 SASS + BEM,
 Node.js (Express),
-MongoDB (Mongoose)
+MongoDB (Mongoose),
 Webpack,
 Heroku platform
 
