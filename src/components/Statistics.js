@@ -19,7 +19,6 @@ const Statistics = ({ isHSPScore }) => {
       const isHSPPercentage = Math.round(isHSPCount / allUsersCount * 100)
       const menCount = stats.filter(stats => stats.gender === 'M').length
       const menPercentage = Math.round(menCount / allUsersCount * 100)
-      const womenCount = allUsersCount - menCount
       const womenPercentage = 100 - menPercentage
 
       return (

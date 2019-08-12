@@ -34,11 +34,9 @@ const Results = ({ age, gender, isHSPScore, points, singleQuestionHighestScore }
       result,
     })
       .then((res) => {
-        console.log(res.data)
         setIsDataPosted(true)
       })
       .catch((e) => {
-        console.log(e)
         setIsDataPosted(false)
       })
   }, [])

@@ -31,7 +31,6 @@ app.post('/stats', async (req, res) => {
     await stats.save()
     res.status(201).send(stats)
   } catch (e) {
-    console.log(e)
     res.status(500).send(e)
   }
 })

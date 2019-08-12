@@ -18,18 +18,12 @@ const HomePage = () => {
         <p className="header__text text">
           Do you get this feeling that your senses are constantly stimulated?
       </p>
-        {/* <p className="text">
-        Do you worship your downtime as if it was the best part of your day?
-      </p> */}
         <p className="header__text text">
           Do loud music and crowded places make you get irritated and overwhlemed, but at the same time you enjoy the company of your friends?
       </p>
         <p className="header__text text">
           Does it fell like everyone around you has much more energy that you?
     </p>
-        {/* <p className="text">
-        ...and this sudden "I need it now" request from you boss that ruins your well-planned schedule.
-      </p> */}
         <p className="header__text text">
           <strong>You are probably a Highly Sensitive Person (HSP)</strong>, as 15-20% people on this planet.
       </p>
