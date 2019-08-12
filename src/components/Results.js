@@ -27,7 +27,7 @@ const Results = ({ age, gender, isHSPScore, points, singleQuestionHighestScore }
   }
 
   useEffect(() => {
-    axios.post(process.env.MONGODB_URL + '/stats/', {
+    axios.post('/stats/', {
       gender,
       age,
       result,

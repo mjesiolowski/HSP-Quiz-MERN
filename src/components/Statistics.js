@@ -7,7 +7,7 @@ const Statistics = ({ isHSPScore }) => {
   const [stats, setStats] = useState({})
 
   useEffect(() => {
-    axios.get(process.env.MONGODB_URL + '/stats/')
+    axios.get('/stats/')
       .then((res) => setStats(res.data))
       .catch((error) => setStats({ error }))
   }, [])
