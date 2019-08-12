@@ -1,4 +1,4 @@
-# HSP
+# HSP Quiz
 
 https://mj-hsp.herokuapp.com/
 
