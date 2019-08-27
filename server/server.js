@@ -6,7 +6,6 @@ const Stats = require('../db/models/stats')
 
 const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
-const port = process.env.PORT;
 
 app.use(cors());
 app.use(express.json())
@@ -39,6 +38,4 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Server is up on port ${port}!`);
-});
+module.exports = app
