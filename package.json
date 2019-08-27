@@ -7,13 +7,9 @@
     "build": "webpack -p --env production",
     "dev-server": "env-cmd -f ./config/dev.env nodemon server/index.js",
     "dev": "webpack-dev-server",
-    "test-react": "env-cmd -f ./config/test.env jest --config=jest.config.json --watch",
-    "test-node": "env-cmd -f ./config/test.env jest --watch --runInBand",
+    "test": "env-cmd -f ./config/test.env jest --config=jest.config.json --watch",
     "start": "node server/index.js",
     "heroku-postbuild": "yarn run build"
-  },
-  "jest": {
-    "testEnvironment": "node"
   },
   "dependencies": {
     "@babel/cli": "^7.5.5",

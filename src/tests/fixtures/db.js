@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Stats = require('../../db/models/stats')
+const Stats = require('../../../db/models/stats')
 
 const resultOne = {
   _id: new mongoose.Types.ObjectId(),

@@ -1,6 +1,10 @@
+/**
+ * @jest-environment node
+ */
+
 const request = require('supertest')
-const app = require('../../server/server')
-const Stats = require('../../db/models/stats')
+const app = require('../../../server/server')
+
 const {
   setDbSettings,
   resultOne,

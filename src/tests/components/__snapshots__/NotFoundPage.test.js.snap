@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render NotFoundPage correctly 1`] = `
+<div
+  className="notFound"
+>
+  <p
+    className="notFound__text text"
+  >
+    There is nothing here.
+  </p>
+   
+  <Link
+    className="notFound__button link button"
+    to="/"
+  >
+    Go home
+  </Link>
+</div>
+`;
