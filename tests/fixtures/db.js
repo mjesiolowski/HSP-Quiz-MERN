@@ -23,7 +23,7 @@ const resultThree = {
 }
 
 const setDbSettings = async () => {
-  // await Stats.deleteMany()
+  await Stats.deleteMany()
   await new Stats(resultOne).save()
   await new Stats(resultTwo).save()
   await new Stats(resultThree).save()
@@ -32,6 +32,4 @@ const setDbSettings = async () => {
 module.exports = {
   setDbSettings,
   resultOne,
-  resultTwo,
-  resultThree
 }
