@@ -27,7 +27,7 @@
     "mini-css-extract-plugin": "^0.7.0",
     "mongodb": "^3.3.0-beta2",
     "mongoose": "^5.6.7",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "normalize.css": "7.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
